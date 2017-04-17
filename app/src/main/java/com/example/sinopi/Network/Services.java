@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Services {
 
-        private static final String BASE_API_URL = "https://api.themoviedb.org/3/movie/";
+        private static final String BASE_API_URL = "https://api.themoviedb.org/3/movie/"; //Movies API url
         private static HttpLoggingInterceptor loggingInterceptor = new
                 HttpLoggingInterceptor().setLevel(
                 HttpLoggingInterceptor.Level.BODY);

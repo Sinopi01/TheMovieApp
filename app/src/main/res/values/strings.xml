@@ -3,5 +3,5 @@
     <string name="sort">Sort by</string>
     <string name="popular">popular</string>
     <string name="top_rated">top rated</string>
-    <string name="appbar_scrolling_view_behavior">Scrolling App Bar</string>
+    <string name="movie_title">Title:</string>
 </resources>

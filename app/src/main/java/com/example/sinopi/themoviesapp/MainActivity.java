@@ -26,7 +26,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements ClickActivator.OnItemClickListener {
 
-    private final String API_KEY = "api key here"; //pass in the api key here
+    private final String API_KEY = "api key here"; // api key should be input here
     RecyclerView mMoviesRecyclerView;
     MoviesAdapter moviesAdapter;
     ArrayList<MovieModels> movies;
@@ -54,8 +54,6 @@ public class MainActivity extends AppCompatActivity implements ClickActivator.On
 
         mMoviesRecyclerView.setAdapter(moviesAdapter);
 
-
-
        mMoviesRecyclerView.addOnItemTouchListener(new ClickActivator(this,this));
 
         populateData(1);
@@ -63,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements ClickActivator.On
     }
 
 
-
+  //Movies poster to be displayed
     private  void setMoviePosters(ArrayList<MovieModels>movies)
     {
         this.movies = movies;
@@ -86,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements ClickActivator.On
         else
             throw new IllegalArgumentException("wrong query type supplied");
 
-        //runs on a background thread and gets the data using the API
+        //Fetches the data using the API
         call.enqueue(new Callback<MovieModels.SearchResult>() {
             @Override
             public void onResponse(Call<MovieModels.SearchResult> call,Response<MovieModels.SearchResult> response) {

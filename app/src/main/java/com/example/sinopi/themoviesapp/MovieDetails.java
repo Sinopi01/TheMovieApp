@@ -28,7 +28,7 @@ public class MovieDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_details);
+        setContentView(R.layout.activity_details);
 
         moviePosterView = (ImageView)findViewById(R.id.moviePoster);
         movieDetailsView = (TextView)findViewById(R.id.movieDetails);
@@ -41,7 +41,9 @@ public class MovieDetails extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         getSupportActionBar().setTitle("Movie Details");
 
         Picasso.with(this)
